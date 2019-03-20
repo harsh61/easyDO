@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskInfoView">
+
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/taskDescription"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Enter task name..."
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:text="Date:"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+
+    <EditText
+        android:id="@+id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edittextstyle"
+        android:ellipsize="start"
+        android:gravity="top|left"
+        android:hint="Enter task description..."
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/taskDescription"
+        android:text="Save"
+        android:onClick="saveEvent"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/taskDescription"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClick"
+        android:text="Cancel"/>
+
+    <Button
+        android:id="@+id/dateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateTxt"
+        android:layout_centerHorizontal="true"
+        android:text="Select Date..."
+        android:onClick="onClick2"
+        android:background="@android:color/white"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="107dp"
+        android:text="Task completed?"
+        android:visibility="invisible" />
+
+</RelativeLayout>
